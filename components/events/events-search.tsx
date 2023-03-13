@@ -11,10 +11,16 @@ const EventsSearch = (props) => {
 	function submitHandler(event) {
 		event.preventDefault();
 
-		const selectedYear = yearInputRef.current.value;
-		const selectedMonth = monthInputRef.current.value;
+		// const selectedYear = yearInputRef.current.value;
+		// const selectedMonth = monthInputRef.current.value;
 
-		props.onSearch(selectedYear, selectedMonth);
+		if (yearInputRef.current && monthInputRef.current) {
+			const selectedYear = yearInputRef.current.value;
+			const selectedMonth = monthInputRef.current.value;
+
+			props.onSearch(selectedYear, selectedMonth);
+		}
+		
 	}
 	return ( 
 		<form className={styles.form} onSubmit={submitHandler}>

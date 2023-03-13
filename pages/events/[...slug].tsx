@@ -21,7 +21,7 @@ const FilteredEventsPage = () => {
   const numYear = +filteredYear
   const numMonth = +filteredMonth
 
-  console.log(numYear)
+  
   if (
     isNaN(numYear) ||
     isNaN(numMonth) ||
