@@ -15,8 +15,8 @@ const EventsSearch = (props) => {
 		// const selectedMonth = monthInputRef.current.value;
 
 		if (yearInputRef.current && monthInputRef.current) {
-			const selectedYear = yearInputRef.current.value;
-			const selectedMonth = monthInputRef.current.value;
+			const selectedYear = yearInputRef.current?.value;
+			const selectedMonth = monthInputRef.current?.value;
 
 			props.onSearch(selectedYear, selectedMonth);
 		}
