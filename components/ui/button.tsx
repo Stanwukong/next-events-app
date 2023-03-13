@@ -1,13 +1,21 @@
-import Link from "next/link";
+import Link from "next/link"
 
-import styles from "./button.module.css";
+import styles from "./button.module.css"
 
 const Button = (props) => {
-	return ( 
-		<Link legacyBehavior href={props.link}>
-			<a className={styles.btn}>{props.children}</a>
-		</Link>	
-	 );
+  if (props.link) {
+    return (
+      <Link legacyBehavior href={props.link}>
+        <a className={styles.btn}>{props.children}</a>
+      </Link>
+    )
+  }
+
+  return (
+    <button className={styles.btn} onClick={props.onClick}>
+      {props.children}
+    </button>
+  )
 }
- 
-export default Button;
+
+export default Button
